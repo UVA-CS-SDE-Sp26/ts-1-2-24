@@ -16,15 +16,12 @@ public class TopSecret {
 
 public static void outputFiles(Path filePath){
     try (Stream<Path> stream = Files.list(filePath)) {
-        int fileNum = 1;
-        for (int i = 0; i < stream.length; i++){
-            String output = String.format("0%d "
+        List<Path> pathList = stream.collect(Collectors.toList());
+        for(int i = 0; i < pathList.size(); i++){
+            System.out.printf("%02d %s%n", i + 1, pathList.get(i).getFileName());
         }
     } catch (IOException e) {
         System.err.println("An I/O error occurred: " + e.getMessage());
     }
 }
 
-public static void printContents(){
-
-}
