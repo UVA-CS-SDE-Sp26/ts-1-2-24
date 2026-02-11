@@ -1,6 +1,3 @@
-The filehandler will read in data files. It will expect files in a folder
-named data, which should be in the same director of the program, or in the
-root of the project folder.
-
-When a request for a file is received,
-the filehandler will return the file's contents.
+The filehandler will read in data files.
+It will expect files in a folder named data, which should be in the same director of the program, or in the root of the project folder.
+When a request for a file is received, the filehandler will return the file's contents.
