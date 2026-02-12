@@ -1,3 +1,14 @@
-The filehandler will read in data files.
+FileHandler Description:
+
+The FileHandler class will read in data files.
 It will expect files in a folder named data, which should be in the same director of the program, or in the root of the project folder.
-When a request for a file is received, the filehandler will return the file's contents.
+When a request for a file is received, the file handler will return the file's contents.
+
+Functionality:
+
++readFile(Path filePath) : String
+----------------------------------------------------------------------------------------------
+This function will take in a Path object, which is used to locate an area in a file system.
+The function will determine whether the file path can be read, or not.
+    If it can be read, it'll return the contents of the file as a String
+    If it cannot be read, it'll return, "File not Found!"

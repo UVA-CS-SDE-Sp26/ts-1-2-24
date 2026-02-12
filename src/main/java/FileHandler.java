@@ -6,23 +6,12 @@ import java.nio.file.Path; //last thing for Paths (so we can use them in our dir
 
 public class FileHandler implements FileReader{
 
-//    public String readFile(String filename) throws IOException
-//    {
-//       // Path filePath = Paths.get(dataDirectory, filename); //this will allow us to look within the Data directory, and get the file path for the file we're looking for
-//        if(!Files.exists(filePath)) //if the file we're trying to read doesn't exist...
-//        {
-//            throw new IOException("File not found!");
-//        }
-//        return Files.readString(filePath); //this will read the file as a string
-//    }
-
     @Override
     public String readFile(Path path) throws IOException{
-        if(!Files.exists(path))
+        if(!Files.exists(path)) //if the file path doesn't exist
         {
-           throw new IOException("File not Found!");
+           throw new IOException("File not Found!"); //it'll throw an exception, and print the message that the file wasn't found
         }
-
-        return Files.readString(path);
+        return Files.readString(path); //otherwise, it'll just return the File's contents as a string!
     }
 }

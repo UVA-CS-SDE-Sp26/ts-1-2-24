@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.nio.file.Path;
 import java.util.List;
 import java.util.OptionalInt;
@@ -29,6 +30,8 @@ public class CLI {
                     return fileReader.readFile(filePath);
                 } catch (IndexOutOfBoundsException e) {
                     return INVALID_FILE_NUMBER_MSG;
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
                 }
             }
         } catch (NumberFormatException e) {
