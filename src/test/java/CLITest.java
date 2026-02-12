@@ -47,6 +47,15 @@ public class CLITest {
     public void testGetInvalidFileNumber() {
         Map<Path, String> fileSystem = Map.of(Path.of("mango.txt"), "mango", Path.of("apple.txt"), "apple");
         CLI cli = new CLI(new MockFileLister(fileSystem), new MockFileReader(fileSystem));
+        String output = cli.getOutput(new String[] {"abc"});
+        assertNotNull(output);
+        assertEquals(CLI.INVALID_FILE_NUMBER_MSG,output);
+    }
+
+    @Test
+    public void testGetOutOfRangeFileNumber() {
+        Map<Path, String> fileSystem = Map.of(Path.of("mango.txt"), "mango", Path.of("apple.txt"), "apple");
+        CLI cli = new CLI(new MockFileLister(fileSystem), new MockFileReader(fileSystem));
         String output = cli.getOutput(new String[] {"03"});
         assertNotNull(output);
         assertEquals(CLI.INVALID_FILE_NUMBER_MSG,output);
