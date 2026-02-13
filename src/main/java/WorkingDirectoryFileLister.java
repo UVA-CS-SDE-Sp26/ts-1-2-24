@@ -6,8 +6,15 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class WorkingDirectoryFileLister implements FileLister {
+    private Path filePath;
+    public WorkingDirectoryFileLister(){
+        this.filePath = Path.of("data");
+    }
+    public WorkingDirectoryFileLister(String path){
+        this.filePath = Path.of(path);
+    }
+
     public List<Path> getFileList() {
-        Path filePath = Path.of("data");
         try (Stream<Path> stream = Files.list(filePath)) {
             return stream.collect(Collectors.toList());
         } catch (IOException e) {
