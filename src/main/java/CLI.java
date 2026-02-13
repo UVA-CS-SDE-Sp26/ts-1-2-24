@@ -31,7 +31,7 @@ public class CLI {
                 } catch (IndexOutOfBoundsException e) {
                     return INVALID_FILE_NUMBER_MSG;
                 } catch (IOException e) {
-                    throw new RuntimeException(e);
+                    return INVALID_FILE_NUMBER_MSG;
                 }
             }
         } catch (NumberFormatException e) {

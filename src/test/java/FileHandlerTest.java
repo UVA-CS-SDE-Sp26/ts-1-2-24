@@ -24,6 +24,7 @@ class FileHandlerTest {
         assertEquals(expectedText,parsedFileHandlerText,"File content matches!");
     }
 
+    @Test
     void readFile_whenFileDoesntExist() //this is for when a file doesn't exist...
     {
         FileHandler fileHandler = new FileHandler();
