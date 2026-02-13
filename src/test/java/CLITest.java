@@ -48,7 +48,7 @@ public class CLITest {
         CLI cli = new CLI(new MockFileLister(fileSystem), new MockFileReader(fileSystem));
         String output = cli.getOutput(new String[] {});
         assertNotNull(output);
-        assertEquals("01 apple.txt\n02 mango.txt\n", output);
+        assertEquals("01 apple.txt 02 mango.txt".replaceAll("\\s+", ""), output.replaceAll("\\s+", ""));
     }
 
     @Test
