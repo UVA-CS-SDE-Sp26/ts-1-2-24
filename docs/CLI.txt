@@ -1,0 +1,11 @@
+Command Line Interface (CLI)
+
+Constructor:
+    Create New Command Line Interface ofject takes 2 args
+    FileReader object implements FileReader in order to read inside of docs within the docs folder
+    FileLister object implements FileLister to list all files in case no args are given
+
+GetOutput
+    Gets the file list from data using the filelister class
+    Outputs the file list if no args given
+    Else goes to filereader class of given filenumber    
