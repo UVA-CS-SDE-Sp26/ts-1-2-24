@@ -12,6 +12,6 @@ import java.util.OptionalInt;
 
 public class TopSecret {
     public static void main(String[] args) {
-        System.out.println(new CLI(new WorkingDirectoryFileLister(), new FileHandler()).getOutput(args));
+        System.out.print(new CLI(new WorkingDirectoryFileLister(), new FileHandler()).getOutput(args));
     }
 }

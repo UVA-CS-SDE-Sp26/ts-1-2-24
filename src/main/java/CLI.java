@@ -6,7 +6,7 @@ import java.util.OptionalInt;
 public class CLI {
     private FileLister fileLister;
     private FileReader fileReader;
-    public static String INVALID_FILE_NUMBER_MSG = "Invalid file number. Run the program without any arguments to see the list of files.";
+    public static String INVALID_FILE_NUMBER_MSG = "You did not enter a valid file number. Please run the program without arguments to see a list of available files and their numbers.";
     public CLI(FileLister fileLister, FileReader fileReader) {
         this.fileLister = fileLister;
         this.fileReader = fileReader;
